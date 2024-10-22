@@ -27,7 +27,7 @@ body {
 
 nav {
     display: flex; 
-    align-items: center; /* Changed from 'right' to 'center' */
+    align-items: center; /* Centered alignment */
     justify-content: space-between;  
     flex-wrap: wrap;
 }
@@ -71,7 +71,7 @@ nav ul li a:hover::after {
 
 .header-text h1 {
     font-size: 60px;
-    margin: 20px 0; /* Fixed margin-top */
+    margin: 20px 0; /* Fixed margin */
 }
 
 #about {
@@ -91,8 +91,8 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 img {
-    width: 140%;
-    height: auto; /* Changed to maintain aspect ratio */
+    width: 100%; /* Adjusted to fill the container */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 50px;
 }
 
@@ -197,7 +197,7 @@ nav ul li a:hover::after {
 
 .section-description {
     font-size: 1.2em; /* Slightly larger font for description */
-    color: #084d19; /* White color for description */
+    color: #084d19; /* Description color */
     margin-bottom: 40px; /* Space below description */
 }
 
@@ -319,6 +319,12 @@ footer {
         margin-bottom: 20px; /* Space between stacked elements */
     }
 
+    .about-col-1 img {
+        width: 100%; /* Fill the container */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 20px; /* Less rounding for smaller screens */
+    }
+
     .sub-title {
         font-size: 40px; /* Adjust subtitle size for mobile */
     }
@@ -336,11 +342,28 @@ footer {
         font-size: 1em; /* Smaller description size for mobile */
     }
 
+    .services-row {
+        grid-template-columns: 1fr; /* Stack service cards on mobile */
+    }
+
     .service-card {
         margin: 10px 0; /* Space between cards */
     }
 
+    .service-content h2 {
+        font-size: 1.4em; /* Adjust service title size for mobile */
+    }
+
     form {
         padding: 10px; /* Add some padding to the form */
+    }
+
+    form input,
+    form textarea {
+        font-size: 14px; /* Smaller font size for inputs */
+    }
+
+    form button {
+        font-size: 14px; /* Smaller button font size */
     }
 }
