@@ -28,7 +28,7 @@ body {
 
 nav {
     display: flex; 
-    align-items: center; 
+    align-items: left; 
     justify-content: space-between;  
     flex-wrap: wrap;
 }
@@ -68,7 +68,7 @@ nav ul li a:hover::after {
 .header-text {
     margin-top: 20%;
     font-size: 30px;
-    text-align: center; /* Center the header text */
+    text-align: left; /* Center the header text */
 }
 
 .header-text h1 {
