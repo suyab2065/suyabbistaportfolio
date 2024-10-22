@@ -4,6 +4,7 @@
     font-family: 'Times New Roman', Times, serif;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -355,7 +356,4 @@ footer {
     }
 
     .service-card {
-        margin: 10px 0; /* Space between cards */
-    }
-
-    .service-content
+       
