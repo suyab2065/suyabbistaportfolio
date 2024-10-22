@@ -391,4 +391,21 @@ footer {
         object-fit: cover; /* Ensures images fit without distortion */
     }
 }
+.about-col-1 img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 400px; /* Limit max height for larger screens */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    border-radius: 20px; /* Rounded corners */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .about-col-1 img {
+        height: 200px; /* Fixed height for mobile */
+        object-fit: cover; /* Maintain aspect ratio */
+        border-radius: 10px; /* Adjust rounding for mobile */
+    }
+}
+
 
