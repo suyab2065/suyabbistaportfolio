@@ -292,3 +292,69 @@ footer {
     transform: scale(1.1); /* Slightly enlarge on hover */
     transition: transform 0.3s; /* Smooth transition */
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+    #header {
+        height: 70vh; /* Reduce header height on mobile */
+        background-position: top; /* Change background position */
+    }
+
+    .container {
+        padding: 10px 5%; /* Reduce padding for smaller screens */
+    }
+
+    nav {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center items */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Adjust margin for mobile */
+    }
+
+    .header-text {
+        margin-top: 10%; /* Adjust margin for mobile */
+        font-size: 24px; /* Reduce font size */
+    }
+
+    .header-text h1 {
+        font-size: 36px; /* Reduce heading size */
+    }
+
+    .row {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center align */
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%; /* Full width on mobile */
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    .tab-titles {
+        flex-direction: column; /* Stack tab titles */
+    }
+
+    .tab-links {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add bottom margin */
+    }
+
+    .services-row {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Single column layout */
+    }
+
+    .service-card {
+        margin: 0; /* Remove margin */
+    }
+
+    form {
+        padding: 0 20px; /* Add some padding */
+    }
+
+    footer {
+        font-size: 14px; /* Reduce footer font size */
+    }
+}
+
+
