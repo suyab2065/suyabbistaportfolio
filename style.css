@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #ffffff
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(suyab4.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex; 
+    align-items: right;
+    justify-content: space-between;  
+    flex-wrap: wrap;
+    
+
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+   
+    
+}
+nav ul li a{
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 18px;
+    position:relative;
+    
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background:#eeeeee;
+    position:absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin: top 20px;;
+}
+
+#about{
+    padding: 80px 0;
+    color: #080808;
+    background-color: #ffffff;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+flex-basis:35%;
+
+}
+.about-col-1 img{
+    width:140%;
+    height: 100%;
+    border-radius: 50px;
+
+}
+.about-col-2{
+    flex-basis: 40%;
+    
+
+}
+.sub-title{
+    font-size:60px;
+    font-weight:600;
+    color: #080808;
+
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+    color: #080808;
+
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position:relative;
+
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #080808;
+    position: absolute;
+    left: 0;
+    bottom:-8px;
+    transition: 0.5s;
+
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    
+
+}
+.tab-contents ul li span{
+    color: #0A6522;
+    font-size: 14px;
+}
+.tab-contents{
+    display:none;
+}
+.tab-contents.activetab{
+    display:block;
+}
+.tab-titles {
+    display: flex; 
+    margin-bottom: 20px; 
+}
+
+.tab-links {
+    padding: 10px 20px;
+    background-color:#080808;  
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 5px; 
+    font-weight: bold;
+    transition: background-color 0.3s; 
+}
+
+.tab-links:hover {
+    background-color:#0A6522;
+    font-weight: bold;
+}
+
+.active-link {
+    background-color: #080808; 
+    font-weight: bold;
+}
+#services {
+    background-color: #ffffff; 
+    padding: 60px 20px;
+    text-align: center; /* Center the text */
+}
+
+.section-title {
+    font-size: 2.5em; /* Larger font for the title */
+    margin-bottom: 10px; /* Space below the title */
+    color: #0A6522; /* Green title color */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.section-title:hover {
+    color: #0B7D3A; /* Slightly lighter color on hover */
+}
+
+.section-description {
+    font-size: 1.2em; /* Slightly larger font for description */
+    color: #084d19; /* White color for description */
+    margin-bottom: 40px; /* Space below description */
+}
+
+.services-row {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    color: #ccc;
+}
+
+.service-card {
+    background-color: #1c1c1c; /* Dark gray background for cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Soft shadow */
+    overflow: hidden; /* Clip content for rounded corners */
+    transition: transform 0.3s; /* Smooth transform on hover */
+  
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.service-image {
+    width: 100%; 
+    height: auto; 
+}
+
+.service-content {
+    padding: 20px; 
+}
+
+.service-content h2 {
+    font-size: 1.6em; 
+    margin: 0 0 10px; 
+   color: #084d19; 
+}
+.contact h2 {
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0725ca;
+    color: #fff;
+    position: relative;
+    animation: fadeIn 1s ease; /* Footer Animation */
+}
+.logo-container {
+    display: flex;
+    justify-content:left; /* Center the logos */
+    align-items: center; /* Align logos vertically */
+    margin: 20px 0; /* Space around the logo section */
+}
+
+.logo {
+    width: 50px; /* Adjust the size of the logos */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between logos */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    transition: transform 0.3s; /* Smooth transition */
+}
