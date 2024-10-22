@@ -92,9 +92,9 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 img {
-    width: 140%;
-    height: 100%;
-    border-radius: 50px;
+    width: 100%; /* Set to 100% width for proper fitting */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50px; /* Rounded corners */
 }
 
 .about-col-2 {
@@ -341,6 +341,12 @@ footer {
         margin-bottom: 20px; /* Space between sections */
     }
 
+    .about-col-1 img {
+        width: 100%; /* Set to 100% width for proper fitting */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 50px; /* Rounded corners */
+    }
+
     .tab-titles {
         flex-direction: column; /* Stack tab titles */
     }
@@ -363,6 +369,4 @@ footer {
     }
 
     footer {
-        font-size: 14px; /* Reduce footer font size */
-    }
-}
+        font-size: 14px;
