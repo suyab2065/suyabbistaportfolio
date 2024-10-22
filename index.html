@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suyab Bista</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Sample styles for demonstration */
+        .tab-links {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f1f1f1;
+            margin-right: 5px;
+        }
+        
+        .active-link {
+            background-color: #ccc;
+        }
+        
+        .tab-contents {
+            display: none; /* Hide all contents by default */
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        .active-tab {
+            display: block; /* Show the active tab content */
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Achievement</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text"></div>
+        <p>Web Developer</p>
+        <h1 style="font-family: cursive;">Hi, my name is Suyab Bista <br> I am a student</h1>
+        <div class="logo-container">
+            <a href="https://github.com/suyab2065" target="_blank">
+                <img src="download.png" alt="GitHub Logo" class="logo">
+            </a>
+            <a href="https://www.instagram.com/suyabdavinchi/?next=%2F" target="_blank">
+                <img src="icons8-instagram-48.png" alt="instagram Logo" class="logo">
+            </a>
+            <a href="https://www.facebook.com/suyab.bista.75" target="_blank">
+                <img src="icons8-facebook-48.png" alt="facebook Logo" class="logo">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="suyab3.jpg">
+            </div>
+            <div class="about-col-1">
+                <h1 class="sub-title">About Me</h1>
+                <p style="font-family: cursive;">Hi, I’m Suyab Bista, a  student with a passion for coding. I have foundational skills in HTML, CSS, and JavaScript, and I’m excited to explore the world of web development.
+
+                    Driven by curiosity and creativity, I aim to turn unique ideas into engaging projects. I’m eager to learn and grow.
+                    
+                    Outside of coding, I enjoy singing, playing cricket, and traveling, which inspire my work and perspective. I hope you enjoy exploring my portfolio and see the potential I’m excited to develop!</p>
+                
+                <div class="tab-titles">
+                    <p style="font-family: cursive;" class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    
+                    <p style="font-family: cursive;"class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <h3 style="font-family: cursive;"> HTML </h3 ><br>
+                        <h3 style="font-family: cursive;">CSS</h3><br>
+                        <h3 style="font-family: cursive;">JavaScript</h3><br>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <h3 style="font-family: cursive;"><span>Little Angels School</span><br>2080 BS / 2023 AD <br>Status-passed <br> GPA 3.65 </h3><br>
+                        <h3 style="font-family: cursive;"><span>KMC</span><br>Status- Currently Studying<br> Stream-Science(Physical Group)</h3>
+                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        
+        for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+      
+        for (let tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+
+        
+        document.getElementById(tabname).classList.add("active-tab");
+        for (let tablink of tablinks) {
+            if (tablink.textContent.trim() === tabname) {
+                tablink.classList.add("active-link");
+            }
+        }
+    }
+</script>
+
+<div id="services">
+    <div class="container">
+        <h1  style="font-family: cursive;" class="section-title">Achievement</h1>
+        <p class="section-description">I offer a range of services designed to help you succeed online:</p>
+        <div class="services-row">
+           
+            
+            <div class="service-card">
+                <img src="CamScanner 10-22-2024 16.31.jpg" alt="achievement" class="service-image">
+                <h2></h2>
+                <p></p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<section id="contact" class="contact section">
+    <form name="submit-to-google-sheet"></form>
+    <h2 style="text-align: center;">Contact Me</h2>
+    <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn btn2">Submit</button>
+    </form>
+    <div id="responseMessage" style="text-align: center; margin-top: 10px;"></div>
+</section>
+
+<script>
+    const scriptURL = '<https://script.google.com/macros/s/AKfycbzF2eoqAh6oULKhljpkz5EiPyiYpGcXiL7Q3YoUDQgwNvDeKnExANCQqeINihYSztuA/exec>'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
