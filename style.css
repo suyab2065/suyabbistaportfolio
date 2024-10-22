@@ -18,22 +18,8 @@ body {
     width: 100%;
     height: 100vh; /* Full viewport height for larger screens */
     background-image: url(suyab4.jpg);
-    background-size: cover; /* Cover the area */
+    background-size: cover; /* Cover the area for larger screens */
     background-position: center; /* Center the image */
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-}
-
-.header-text {
-    text-align: center; /* Center the header text */
-    color: #ffffff; /* Ensure text is visible */
-    padding: 20px; /* Padding around text */
-}
-
-.header-text h1 {
-    font-size: 60px;
-    margin: 0; /* Remove margin for consistency */
 }
 
 .container {
@@ -51,11 +37,8 @@ nav {
     width: 140px;
 }
 
-nav ul {
-    display: flex; /* Use flex for navigation items */
-}
-
 nav ul li {
+    display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
@@ -82,6 +65,17 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+    text-align: center; /* Center the header text */
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin: 20px 0; /* Fixed margin */
+}
+
 #about {
     padding: 80px 0;
     color: #080808;
@@ -94,9 +88,8 @@ nav ul li a:hover::after {
     flex-wrap: wrap;
 }
 
-.about-col-1,
-.about-col-2 {
-    flex-basis: 50%; /* Allow columns to take up equal space */
+.about-col-1 {
+    flex-basis: 50%; /* Adjust to allow image to fit */
     padding: 20px; /* Padding for spacing */
 }
 
@@ -104,7 +97,11 @@ nav ul li a:hover::after {
     width: 100%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
     border-radius: 20px; /* Rounded corners */
-    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+}
+
+.about-col-2 {
+    flex-basis: 50%; /* Adjust to allow text to fit */
+    padding: 20px; /* Padding for spacing */
 }
 
 .sub-title {
@@ -309,24 +306,28 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    .container {
+        padding: 10px 5%; 
+    }
+
+    nav ul li {
+        margin: 5px 10px; 
+    }
+
+    .header-text h1 {
+        font-size: 40px; 
+    }
+
     #header {
         height: auto; /* Allow the height to adjust based on content */
         background-size: contain; /* Ensure the entire image is visible */
         background-repeat: no-repeat; 
     }
 
-    .header-text {
-        padding: 10px; /* Reduce padding for mobile */
-    }
-
-    .header-text h1 {
-        font-size: 40px; /* Adjust header size for mobile */
-    }
-
-    .about-col-1,
-    .about-col-2 {
+    .about-col-1, .about-col-2 {
         flex-basis: 100%; /* Stack columns on mobile */
         margin-bottom: 20px; 
+        padding: 10px; /* Padding for spacing */
     }
 
     .about-col-1 img {
@@ -335,24 +336,24 @@ footer {
     }
 
     .sub-title {
-        font-size: 40px; /* Adjust subtitle size for mobile */
+        font-size: 40px; 
     }
 
     .tab-links {
-        font-size: 16px; /* Smaller font size for tabs */
+        font-size: 16px; 
         margin-right: 20px; 
     }
 
     .section-title {
-        font-size: 2em; /* Smaller title size for mobile */
+        font-size: 2em; 
     }
 
     .section-description {
-        font-size: 1em; /* Smaller description size for mobile */
+        font-size: 1em; 
     }
 
     .services-row {
-        grid-template-columns: 1fr; /* Stack service cards on mobile */
+        grid-template-columns: 1fr; 
     }
 
     .service-card {
