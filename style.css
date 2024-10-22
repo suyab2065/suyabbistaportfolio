@@ -367,3 +367,28 @@ footer {
         font-size: 14px; /* Smaller button font size */
     }
 }
+/* Other CSS remains the same */
+
+.about-col-1 img {
+    width: 100%; /* Fill the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Less rounding for smaller screens */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .about-col-1 img {
+        width: 100%; /* Fill the container */
+        height: 200px; /* Fixed height for mobile */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 10px; /* Adjust rounding for mobile */
+    }
+
+    .service-image {
+        width: 100%;
+        height: 200px; /* Fixed height for service images */
+        object-fit: cover; /* Ensures images fit without distortion */
+    }
+}
+
