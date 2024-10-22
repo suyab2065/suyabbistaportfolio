@@ -15,10 +15,10 @@ body {
 
 #header {
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* Full viewport height for larger screens */
     background-image: url(suyab4.jpg);
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /* Cover the area for larger screens */
+    background-position: center; /* Center the image */
 }
 
 .container {
@@ -91,9 +91,11 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 img {
-    width: 100%; /* Adjusted to fill the container */
+    width: 100%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 50px;
+    max-height: 400px; /* Limit max height for larger screens */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    border-radius: 20px; /* Rounded corners */
 }
 
 .about-col-2 {
@@ -314,15 +316,21 @@ footer {
         font-size: 40px; /* Adjust header size for mobile */
     }
 
+    #header {
+        height: auto; /* Allow the height to adjust based on content */
+        background-size: contain; /* Ensure the entire image is visible */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+    }
+
     .about-col-1, .about-col-2 {
         flex-basis: 100%; /* Stack columns on mobile */
         margin-bottom: 20px; /* Space between stacked elements */
     }
 
     .about-col-1 img {
-        width: 100%; /* Fill the container */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 20px; /* Less rounding for smaller screens */
+        height: 200px; /* Fixed height for mobile */
+        object-fit: cover; /* Maintain aspect ratio */
+        border-radius: 10px; /* Adjust rounding for mobile */
     }
 
     .sub-title {
@@ -350,62 +358,4 @@ footer {
         margin: 10px 0; /* Space between cards */
     }
 
-    .service-content h2 {
-        font-size: 1.4em; /* Adjust service title size for mobile */
-    }
-
-    form {
-        padding: 10px; /* Add some padding to the form */
-    }
-
-    form input,
-    form textarea {
-        font-size: 14px; /* Smaller font size for inputs */
-    }
-
-    form button {
-        font-size: 14px; /* Smaller button font size */
-    }
-}
-/* Other CSS remains the same */
-
-.about-col-1 img {
-    width: 100%; /* Fill the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 20px; /* Less rounding for smaller screens */
-    object-fit: cover; /* Ensures image covers the area without distortion */
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .about-col-1 img {
-        width: 100%; /* Fill the container */
-        height: 200px; /* Fixed height for mobile */
-        object-fit: cover; /* Maintain aspect ratio and cover the area */
-        border-radius: 10px; /* Adjust rounding for mobile */
-    }
-
-    .service-image {
-        width: 100%;
-        height: 200px; /* Fixed height for service images */
-        object-fit: cover; /* Ensures images fit without distortion */
-    }
-}
-.about-col-1 img {
-    width: 100%; /* Full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 400px; /* Limit max height for larger screens */
-    object-fit: cover; /* Cover the area while maintaining aspect ratio */
-    border-radius: 20px; /* Rounded corners */
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .about-col-1 img {
-        height: 200px; /* Fixed height for mobile */
-        object-fit: cover; /* Maintain aspect ratio */
-        border-radius: 10px; /* Adjust rounding for mobile */
-    }
-}
-
-
+    .service-content
